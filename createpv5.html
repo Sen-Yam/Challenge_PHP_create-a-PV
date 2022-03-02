@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(231, 248, 243);">
+    <div style="display : flex ; margin-left: 50px;margin-top: 50px;">
+        <img src="images/menu.png" width="50px" height="40px">
+        <div style="background-color:rgb(54, 71, 54) ; width: 530px;height: 5px; margin-left: 320px; margin-top: 100px;"></div>
+        <div style="display : flex ; position : absolute ; margin-top: 60px; margin-left: 250px;">
+            <div class="div"><p>1</p> </div>
+            <div class="div"><p>2</p> </div>
+            <div class="div"><p>3</p> </div>
+            <div class="div"><p>4</p> </div>
+        </div>
+        
+    </div>
+    
+    <img src="images/meeting.png" width="300px" length="300px" style="margin-left: 540px; margin-top: 100px;">
+    <h1>Entrer les decisons prises dans la reunion</h1>
+    <div class="perso" >
+        <div id="i1">
+            <div style="display : flex ; margin-top: 40px; ">
+                <input type="text" placeholder="Taper ici">
+                <button>Ajouter</button>
+                <button class="btn">Continuer</button>
+            </div>
+            
+        </div>
+        <div id="i2">
+            <div style="display : flex ; margin-top: 40px;  " >
+                <input type="text" placeholder="Taper ici">
+                <button>Ajouter</button>
+                <button class="btn">Continuer</button>
+            </div>
+        </div>
+        <div id="i3">
+            <div style="display : flex ;margin-top: 40px;  " >
+                <input type="text" placeholder="Taper ici">
+                <button>Ajouter</button>
+                <button class="btn">Continuer</button>
+            </div>
+        </div>
+        <div id="i4">
+            <div style="display : flex ;margin-top: 40px;  " >
+                <input type="text" placeholder="Taper ici">
+                <button>Ajouter</button>
+                <button class="btn">Continuer</button>
+            </div>
+        </div>
+       <div id="i5">
+        <div style="display : flex ;margin-top: 40px;  " >
+            <input type="text" placeholder="Taper ici">
+            <button>Ajouter</button>
+            <button class="btn">Continuer</button>
+        </div>
+       </div>
+        <div id="i6">
+            <div style="display : flex ;margin-top: 40px;  " >
+                <input type="text" placeholder="Taper ici">
+                <button>Ajouter</button>
+                <button class="btn">Continuer</button>
+            </div>
+        </div>
+        <div  id="i7">
+            <div style="display : flex ; margin-top: 40px; ">
+                <input type="text" placeholder="Taper ici">
+                <button>Ajouter</button>
+                <button class="btn">Continuer</button>
+            </div>
+        </div>
+        <div  id="i8">
+            <div style="display : flex ;margin-top: 40px;  ">
+                <input type="text" placeholder="Taper ici">
+                <button>Ajouter</button>
+                <button class="btn">Continuer</button>
+            </div>
+        </div>
+        <div id="i9">
+            <div style="display : flex ; margin-top: 40px; " >
+                <input type="text" placeholder="Taper ici">
+                <button>Ajouter</button>
+                <button class="btn">Continuer</button>
+            </div>
+        </div>
+        <div id="i10">
+            <div style="display : flex ;margin-top: 40px;  " >
+                <input type="text" placeholder="Taper ici">
+                <button>Ajouter</button>
+                <button class="btn">Continuer</button>
+            </div>
+        </div>
+    </div>
+    <style>
+        .div {
+        
+        color: white;
+        background-color: rgb(54, 71, 54);
+        margin-left: 100px;
+        width: 70px;
+        height: 70px;
+        border-radius: 40px;
+        
+    }
+        body div div div p {
+        font-weight: bold;
+        margin-left: 28px;
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    
+        body div div div button {
+            background-color: rgb(255, 187, 0);
+            color : white; border: none; 
+            padding: 13px; font-size: 25px; width: 210px;
+            height :80px; 
+            margin-left: 30px; margin-top: 50px;
+            box-shadow: 3px 3px 10px rgba(0,0,0, .4);
+        }
+        button:hover {
+            transform : scale(1.1);
+            color : black;
+        }
+        h1 {
+        color : black;
+        font-weight : bold;
+        font-size : 50px ;
+        margin-left: 200px;
+        margin-top: 160px;
+    }
+    
+    body div div div  input {
+        padding: 20px;
+        width: 350px;
+        height: 40px;
+        margin-left: 50px;
+        margin-top: 50px;
+        font-size: 30px;
+        border: 1px solid black;
+    }
+    .btn {
+        background-color: orangered;
+         color : white; border: none; 
+          font-size: 28px; width: 200px;
+          margin-left: 400px; margin-top: 50px;
+          height: 80px;
+    }
+    #i2,#i3, #i4, #i5 ,#i6 ,#i7 ,#i8, #i9 ,#i10 {
+    display : none;
+}
+    </style>
+</body>
+<script>
+    for(let i=0 ; i<10 ;i++) {
+        document.querySelector('.perso').children[i].children[0].children[2].onclick= function(e) {
+            if(document.querySelector('.perso').children[i].children[0].children[0].value=="") {
+                document.querySelector('.perso').children[i].children[0].children[0].style.border='1px solid red';
+            }
+            else {
+                location.href='createpv5.html';
+            }
+        }
+        document.querySelector('.perso').children[i].children[0].children[1].onclick= function() {
+            if(document.querySelector('.perso').children[i].children[0].children[0].value !=="") {
+                document.querySelector('.perso').children[i].children[0].children[0].style.border='1px solid black';
+            document.querySelector('.perso').children[i+1].style.display='block'; 
+            document.querySelector('.perso').children[i].children[0].children[2].style.display='none';
+            }
+            else {
+                document.querySelector('.perso').children[i].children[0].children[0].style.border='1px solid red';
+            }
+        }
+    }
+</script>
+</html>
