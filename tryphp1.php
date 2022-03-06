@@ -1,7 +1,16 @@
+<?php
+   if(isset($_POST['but'])) {
+    include 'connection1.php';
+    $but= ($_POST['but']); 
+    $sql= "INSERT INTO test1 VALUES('$but')";
+    $res= mysqli_query($conn , $sql);
+    
+};
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="createpv.css">
+    
     <title>Document</title>
 </head>
 <body>
@@ -26,14 +35,18 @@
             <p class="p" style="margin-left: 150px;" >Debut de la reunion</p>
             <p class="p"  style="margin-left: 200px;"> Fin de la reunion</p>
         </div>
-        <div style="display: flex; margin-top: 0px;">
-            <input type="text" placeholder="jj/mm/aa" class="in1" >
-            <input type="text" placeholder="hh/min" class="in2">
-            <input type="text" placeholder="hh/min" class="in3">
+       
+            <form action="tryphp2.php" method="post">
+                <div style="display: flex; margin-top: 0px;">
+                <input type="text" placeholder="jj/mm/aa" class="in1" name="date" >
+            <input type="text" placeholder="hh/min" class="in2" name="heure1">
+            <input type="text" placeholder="hh/min" class="in3" name="heure2">
         </div>
+            <button>Continuer</button>
+            </form>
+       
     </div>
     
-    <button>Continuer</button>
 </body>
 <style>
     body div div div {
@@ -65,7 +78,7 @@ h1 {
     margin-top: 160px;
 }
 
-body div input {
+.in1 , .in2  , .in3 {
     padding: 20px;
     width: 350px;
     height: 40px;
@@ -85,7 +98,7 @@ body button:hover {
 }
 </style>
 <script>
-    document.querySelector('button').onclick= function (e) {
+    document.querySelector('button').onkeyup= function (e) {
        
          e.preventDefault();
         var ok1=true;
@@ -104,10 +117,12 @@ body button:hover {
             document.querySelector('.in3').style.border='1px solid red';
         }
         if(ok1==true && ok2==true && ok3==true) {
-            location.href='createpv3.html'
+            location.href='tryphp2.php'
         }
 }
     
 
 </script>
 </html>
+
+

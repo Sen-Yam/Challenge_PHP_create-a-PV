@@ -1,0 +1,39 @@
+body div h1 {
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 30px;
+    
+}
+body div p {
+    font-size: 30px;
+    margin-left: 20px;
+}
+body div p:hover {
+    color : white;
+}
+.p {
+    font-size: 30px;
+    margin-left: 20px;
+    color : green;
+    margin-top : 45px;
+    font-weight: bold;
+    margin-left: 70px;
+    text-decoration: underline;
+}
+body div img {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+body div div {
+    display : flex;
+}
+h2 {
+    margin-left: 40px;
+    color : black;
+    font-size : 40px;
+    text-decoration: underline;
+}
+li {
+    font-size : 30px ; color : black ; font-weight: bold;
+    list-style-type: none;
+}
