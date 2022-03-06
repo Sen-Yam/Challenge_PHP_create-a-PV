@@ -32,7 +32,7 @@ if(isset($_POST['boutton'])) {
     </div>
     
     <img src="images/meeting.png" width="300px" length="300px" style="margin-left: 540px; margin-top: 100px;">
-	<h1>Entrer les decisions prises dans la reunion</h1>
+	<h1>Les taches</h1>
 	<button id="h">Ajouter des taches</button>
 	<form action="tryphp6.php" class="f" method="post">
         <button class="btn" name="boutton">Creer le PV</button>
