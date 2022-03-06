@@ -11,6 +11,7 @@ include 'connection1.php';
     <title>Document</title>
 </head>
 <body style="background-color: brown;">
+<button class="btn">HOME</button>
     <div style="display : flex ; background-color: rgb(236, 201, 155);">
        <div>
         <img src="images/menu.png"  width="50px" height="40px" style="margin-left: 40px;">
@@ -194,6 +195,26 @@ include 'connection1.php';
     
     
   }
+  .btn {
+        background-color: orangered;
+         color : white; border: none; 
+          font-size: 28px; width: 200px;
+          margin-left: 500px; margin-top: 50px;
+          height: 80px;
+          margin-bottom: 50px
+  }
+
+  .btn:hover {
+    transform: scale(1.1);
+  }
 </style>
+
+<script>
+  document.querySelector('.btn').onclick= function() {
+    location.href='pagehtml.html';
+  }
+
+</script>
+
 </html>
 
